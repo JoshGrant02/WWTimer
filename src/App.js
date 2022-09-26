@@ -7,6 +7,11 @@ function App() {
   const dayOrNightString = isDaytime ? "Day" : "Night"
   const dayOrNightOppositeString = isDaytime ? "Night" : "Day"
 
+  const restartGame = () => {
+    setCurrentDay(0);
+    setIsDaytime(false);
+  }
+
   const transitionDay = () => {
     if (!isDaytime) {
       setCurrentDay(currentDay + 1);
@@ -17,9 +22,13 @@ function App() {
   return (
     <div className="App">
       <h3>Welcome</h3>
+      <button onClick={restartGame}>{"Restart Game"}</button>
+
       <button onClick={transitionDay}>{"Move To " + dayOrNightOppositeString}</button>
 
       <label>{"It is " + dayOrNightString + "time of day #" + currentDay}</label>
+      
+
     </div>
   );
 }
