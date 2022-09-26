@@ -1,0 +1,16 @@
+Welcome
+
+Begin Night Phase
+Night XX,
+
+Day XX,
+
+Start Discussion (begin timer) - can add or remove from timer, default 2 min
+
+Someone is accused, pause, then click again to begin accusation timer. Can skip through accusation timer.
+Click again to being defendant timer. Can skip through defendent timer.
+
+Vote
+
+Killed? go to night
+not Killed, go back to line 8 if first time, if second time, go to night
