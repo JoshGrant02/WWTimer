@@ -3,17 +3,23 @@ import React from 'react';
 
 function App() {
   const [currentDay, setCurrentDay] = React.useState(0);
+  const [isDaytime, setIsDaytime] = React.useState(false);
+  const dayOrNightString = isDaytime ? "Day" : "Night"
+  const dayOrNightOppositeString = isDaytime ? "Night" : "Day"
 
-  const addDay = () => {
-    console.log("test");
-    setCurrentDay(currentDay + 1);
+  const transitionDay = () => {
+    if (!isDaytime) {
+      setCurrentDay(currentDay + 1);
+    }
+    setIsDaytime(!isDaytime)
   }
 
   return (
     <div className="App">
       <h3>Welcome</h3>
-      <button onClick={addDay}>Add Day</button>
-      <label>{currentDay}</label>
+      <button onClick={transitionDay}>{"Move To " + dayOrNightOppositeString}</button>
+
+      <label>{"It is " + dayOrNightString + "time of day #" + currentDay}</label>
     </div>
   );
 }
