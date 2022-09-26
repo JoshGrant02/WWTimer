@@ -11,6 +11,7 @@ function App() {
   const dayOrNightOppositeString = isDaytime ? "Night" : "Day"
 
   const restartGame = () => {
+    setDiscussionTimer(60);
     setCurrentDay(0);
     setIsDaytime(false);
   }
